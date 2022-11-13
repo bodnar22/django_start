@@ -1,0 +1,19 @@
+{% extends 'bboard/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>{{ title }}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aut earum et ipsum labore nam, quasi quia
+        repudiandae vel voluptas.</p>
+    <button class="btn btn-warning">На страницу про нас</button>
+
+    {% for el in values %}
+    <p>{{ el }}</p>
+    {% endfor %}
+
+    {{ obj.age }}
+</div>
+{% include 'bboard/test.html' %}
+{% endblock %}
